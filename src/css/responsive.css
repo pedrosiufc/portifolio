@@ -1,0 +1,64 @@
+/* Estilos para o menu hambúrguer */
+.hamburger {
+    display: none; /* Oculto por padrão */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Media Query para Tablets e Telas Menores */
+@media (max-width: 768px) {
+    .header-container nav ul {
+        display: none; /* Oculta a navegação principal */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do seu header */
+        left: 0;
+        background-color: var(--section-background);
+    }
+
+    .header-container nav ul.nav-active {
+        display: flex; /* Mostra a navegação quando ativa */
+    }
+
+    .hamburger {
+        display: flex; /* Mostra o ícone do hambúrguer */
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para os projetos */
+    }
+
+    .description-image {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description-image img {
+        margin-top: 1rem;
+    }
+}
+
+/* Media Query para Celulares */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Uma coluna para os projetos */
+    }
+}

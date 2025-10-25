@@ -155,7 +155,9 @@ h2 {
 
 .images{
     display: flex;
-    justify-content: space-evenly;    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* Card Styles */

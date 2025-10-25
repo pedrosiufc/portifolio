@@ -29,3 +29,14 @@ themeToggle.addEventListener('click', () => {
         themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 });
+
+// Obtém o menu hambúrguer e a lista de navegação
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+
+// Adiciona um ouvinte de evento de clique ao menu hambúrguer
+hamburger.addEventListener('click', () => {
+    // Alterna a classe 'nav-active' na lista de navegação
+    // Isso irá mostrar ou esconder o menu de navegação em telas menores
+    navUl.classList.toggle('nav-active');
+});
